@@ -1,3 +1,6 @@
-rever role do app_exec 
-com urgencia
+rever role do app_exec (com urgencia)
+arrumar nomes das variaveis e dos arquivos(ta mt nojento)
+e comentar 
+mesagens de erro(meu senhor q absurdo)
+colocar imagens
 

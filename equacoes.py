@@ -149,7 +149,7 @@ class equacoes(QtGui.QDialog, Ui_Dialog):
 			i = (k * (Tr**m)) / ((intervalo + t0)**n)
 			lintensidade.append(i)
 
-		print(lintensidade)
+		#print(lintensidade)
 
 		#zerando o contador
 		intervalo = 0 
@@ -183,9 +183,12 @@ class equacoes(QtGui.QDialog, Ui_Dialog):
 		lblocosAlternados = lprecipitacaoDiferenca[::2]
 		lblocosAlternados += list(reversed(lprecipitacaoDiferenca[1::2]))
 		
+		precipitacao = sum(lblocosAlternados)
+		print(precipitacao)
+		
 		#mostrar pagina
 		#corrigir
-		w = Scs(lintensidade, lblocosAlternados)
+		w = Scs(precipitacao)
 		w.show()
 		#rever	
 		app.exec_()
