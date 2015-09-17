@@ -124,6 +124,7 @@ class Scs(QtGui.QWidget, Ui_Scs):
 		self.ia10.setText(str(ia10))
 		self.iaTotal.setText(str(iaTotal))
 		
+		#VER ISSO 
 		if(precipitacao > ia1):
 			e1 = (precipitacao - ia1) / (precipitacao - ia1 + s1)
 		else:
@@ -203,6 +204,93 @@ class Scs(QtGui.QWidget, Ui_Scs):
 		self.v9.setText(str(v9))
 		self.v10.setText(str(v10))
 		self.vTotal.setText(str(vTotal))
+		
+		#essa parte de cima eh o q eu vou mostrar
+		#coisas que so calcula escondida para gerar o hidrograma utitario
+		
+		#Precipitacao Unitaria em mm
+		pUnitario = 1
+		
+		#Duracao Unitaria em min
+		#Discretizacao q o usuario escolheu
+		#N EH dez
+		tu = 10
+		#converter para h
+		#tu = tu/60
+		
+		#Tempo de Concentracao em h
+		#PUXAR DE EMPIRICAS
+		#N EH 1
+		tc = 1
+		
+		#Tempo de Pico em h
+		ta = tu/2 + 0.6 * tc
+		
+		#Tempo de Base em h
+		tb = 2.67 * ta
+		
+		#Vazao de Pico 
+		vp = (0.75 * areaTotal * pUnitario)/(3.6 * ta)
+		
+		#Convertendo para minutos e arredondando
+		#ver como arredonda
+		ta = int((ta * 60))
+		tb = int((tb * 60))
+		
+		#Arredondando
+		vp = int(vp)
+		
+		#Para a reta Ascendente
+		a1 = 0
+		b1 = float(vp)/float(ta)
+		
+		#Para a reta Descendente
+		b2 = float((-vp))/float((tb-ta))		
+		a2 = float(-tb * b2)
+
+		#lista q ira conter a discretizacao
+		ldiscretizacao = []
+		#variavel para a discretizacao
+		aux = 0
+		
+		while(aux <= ta):
+			ldiscretizacao.append(a1+(b1*aux))
+			aux = aux + tu
+			
+		 while(aux <= tb):
+			ldiscretizacao.append(a2+(b2*aux))
+			aux = aux + tu
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

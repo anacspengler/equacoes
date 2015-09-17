@@ -4,3 +4,9 @@ e comentar
 mesagens de erro(meu senhor q absurdo)
 colocar imagens
 
+colocar a imagem do vazao de pico(metodo racional) e o tempo de baase com suas respectivas formulas
+
+o usuario escolhe o tempo de discretizacao(mudar na idf)
+
+ver como arredonda
+
