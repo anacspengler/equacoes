@@ -778,7 +778,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="vTotal_2">
+  <widget class="QLineEdit" name="vTotal">
    <property name="geometry">
     <rect>
      <x>480</x>

@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'scs.ui'
 #
-# Created: Wed Sep 16 15:45:17 2015
+# Created: Thu Oct  1 17:50:22 2015
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -241,9 +241,9 @@ class Ui_Scs(object):
         self.v2 = QtGui.QLineEdit(Scs)
         self.v2.setGeometry(QtCore.QRect(480, 340, 61, 27))
         self.v2.setObjectName(_fromUtf8("v2"))
-        self.vTotal_2 = QtGui.QLineEdit(Scs)
-        self.vTotal_2.setGeometry(QtCore.QRect(480, 610, 61, 27))
-        self.vTotal_2.setObjectName(_fromUtf8("vTotal_2"))
+        self.vTotal = QtGui.QLineEdit(Scs)
+        self.vTotal.setGeometry(QtCore.QRect(480, 610, 61, 27))
+        self.vTotal.setObjectName(_fromUtf8("vTotal"))
         self.label_17 = QtGui.QLabel(Scs)
         self.label_17.setGeometry(QtCore.QRect(400, 250, 71, 51))
         self.label_17.setObjectName(_fromUtf8("label_17"))

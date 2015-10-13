@@ -183,12 +183,11 @@ class equacoes(QtGui.QDialog, Ui_Dialog):
 		lblocosAlternados = lprecipitacaoDiferenca[::2]
 		lblocosAlternados += list(reversed(lprecipitacaoDiferenca[1::2]))
 		
-		precipitacao = sum(lblocosAlternados)
-		print(precipitacao)
+		self.precipitacao = sum(lblocosAlternados)
 		
 		#mostrar pagina
 		#corrigir
-		w = Scs(precipitacao)
+		w = Scs(self.precipitacao)
 		w.show()
 		#rever	
 		app.exec_()
